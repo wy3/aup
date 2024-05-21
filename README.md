@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://github.com/autoplus-lang/aup/blob/dev/aup.png?raw=true" width="120px" />
   <h3 align="center">The AutoIt+ programming language</h3>
-  <p align="center">Language design: <a href="https://aup.nomi.dev<">aup.nomi.dev</a></p>
+  <p align="center">Language design: <a href="https://aup.nomi.dev/" target="_blank">aup.nomi.dev</a></p>
 </p>
 
 <br>
