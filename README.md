@@ -1,27 +1,49 @@
-<img align="left" src="https://github.com/wy3/aup/blob/dev/aup.png?raw=true" width="120px">
-
-# aup
-The **AutoIt+** programming language, based on my [Lox implementation](https://github.com/nomi-san/lox).
-
-<br>
 <br>
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2bf76994c0e24ee4a5e849ecf37e4f42)](https://www.codacy.com/gh/autoitplus/aup?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=autoitplus/aup&amp;utm_campaign=Badge_Grade)
+<p align="center">
+  <img src="https://github.com/autoplus-lang/aup/blob/dev/aup.png?raw=true" width="120px" />
+  <h3 align="center">The AutoIt+ programming language</h3>
+  <p align="center">Language design: <a href="https://aup.nomi.dev<">aup.nomi.dev</a></p>
+</p>
 
-### about
-- Fast & lightweight.
-- Register-based virtual machine.
-- The unofficial **AutoIt v4**!
-- Made with ❤ by [@me](https://github.com/nomi-san).
-
-### work in progress
-- Issues are welcome!
-- ~~The first release can be in~~ Implementation plan:
-  ```diff
-  -year(2020).from('June').to('December')
-  +Q2 2021 -> Q1 2022
-  ```
-  
 <br>
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L6W74V)
+### 🚧 Why archived?
+
+This repository has been archived. While the goal of creating a new language implementation for AutoIt (plus some new syntaxes) was ambitious, the challenges of building a custom runtime proved to be significant.
+Due to my current workload commitments, further development on this project is infeasible. The provided code serves as a reference for those interested in exploring alternative approaches to AutoIt language extensions.
+
+### ✨ A new future?
+
+> AutoSharp
+
+While the this compiler was written in C and aimed for a full rewrite, a significant milestone has been achieved with a successful transpiler translating AutoIt(+) code into C#.
+This transpiler resides in a separate repository and isn't included here. This success story lays the groundwork for the potential development of a full-fledged compiler that harnesses the power of the .NET platform.
+Imagine seamless integration with .NET libraries and the potential for Native AOT compilation, leading to dramatic performance improvements! Stay tuned for further developments as this project forges a new path!
+
+See you again at the end of year.
+
+```go
+// fib.aup
+func fib(n) {
+  if n < 2 {
+    return n;
+  }
+  return fib(n - 2) + fib(n - 1)
+}
+```
+
+```cs
+// fib.aup.cs
+l0_fib_00be8d5a = Value.Function((Value[] p_00f37a0e) =>
+{
+  Value l0_n_00fa30f4 = p_00f37a0e[0];
+  if (((bool)((l0_n_00fa30f4).__lt_cond(2D))))
+  {
+    return l0_n_00fa30f4;
+  }
+  return (l0_fib_00be8d5a.__call((l0_n_00fa30f4).__sub(2D))).__add(l0_fib_00be8d5a.__call((l0_n_00fa30f4).__sub(1D)));
+});
+```
+
+> `Value` is a NaN number, a runtime value. 
